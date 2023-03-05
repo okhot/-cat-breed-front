@@ -1,0 +1,35 @@
+.card {
+  width: 250px;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 472px;
+  
+}
+
+.card__image {
+  height: 200px;
+}
+
+.card__details {
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.card__details__name {
+  margin: 0px;
+  position: relative;
+  bottom: 0%;
+}
+
+.details_stats {
+  display: none;
+  bottom: -100%;
+}
+
+.card:hover .details_stats {
+  display: block;
+}

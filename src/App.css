@@ -16,6 +16,8 @@ body{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .rawJson {
@@ -38,8 +40,8 @@ body{
   display: flex;
   align-items: center;
   font-size: 14px;
-  gap: 5px;
   padding: 2rem 0;
+  width: 105px;
 }
 
 input {
