@@ -16,7 +16,7 @@
   padding: 5px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: flex-end;
 }
 
 .card__details__name {
@@ -27,7 +27,6 @@
 
 .details_stats {
   display: none;
-  bottom: -100%;
 }
 
 .card:hover .details_stats {

@@ -20,6 +20,7 @@ export default function CatCard({ cardData }) {
     >
       <div className={style.card__image}></div>
       <div className={style.card__details}>
+      <div className={style.details_stats}></div>
         <h1 className={style.card__details__name}>Name:{name}</h1>{" "}
         <p>Origin: {origin}</p>
         <p>Child Friendly: {child_friendly}</p>
