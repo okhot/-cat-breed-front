@@ -16,6 +16,9 @@ Your localhost should be configured to the port on which the backend is running.
 
 > **NOTE**: Make sure the backend is running before you run the frontend
 
+## Quick Links
+Follow this link to setup the backend
+- [Backend](https://github.com/okhot/cat-breed-backend#readme)
 
 ## Commands
 
