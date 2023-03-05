@@ -11,8 +11,8 @@ npm install
 
 ## Seting up Environment
  
-Once ```node_modules``` is installed, go to you ``` .env.example ``` file and create an ```.env``` from the example provided in it.
-Your localhost should be configured to the port on which the backend is running.
+Once ```node_modules``` is installed, go to you ``` env.example ``` file and create an ```.env``` from the example provided in it.
+You should configure the value of ``REACT_APP_API_BASE_URL`` to the url of the backend which must be setup and running for the frontend to work properly.
 
 > **NOTE**: Make sure the backend is running before you run the frontend
 
