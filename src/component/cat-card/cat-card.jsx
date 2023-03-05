@@ -18,10 +18,9 @@ export default function CatCard({ cardData }) {
         backgroundImage: `url(https://cdn2.thecatapi.com/images/${reference_image_id}.jpg)`,
       }}
     >
-      <div className={style.card__image}></div>
       <div className={style.card__details}>
       <div className={style.details_stats}></div>
-        <h1 className={style.card__details__name}>Name:{name}</h1>{" "}
+        <h1 className={style.card__details__name}>{name}</h1>{" "}
         <p>Origin: {origin}</p>
         <p>Child Friendly: {child_friendly}</p>
         <p>Dog Friendly: {dog_friendly}</p>
