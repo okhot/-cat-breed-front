@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Filter } from "./api/auth";
 import "./App.css";
 import CatCard from "./component/cat-card/cat-card";
@@ -12,17 +12,16 @@ function App() {
     isDogFriendly: false,
     isStrangerFriendly: false,
   });
+
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
 
-  const handleChange = async (index) => {
-    const newCheck = {};
-    Object.keys(check).forEach((key, position) => {
-      index === position
-        ? (newCheck[key] = !check[key])
-        : (newCheck[key] = check[key]);
-    });
-    setCheck(newCheck);
+  useEffect(() => {
+    fetchData(check)
+  },[check])
+  
+
+  async function fetchData(newCheck) {
     setIsLoading(true);
 
     try {
@@ -32,11 +31,20 @@ function App() {
       console.log(err);
     }
     setIsLoading(false);
+  }
+
+  const handleChange = (index) => {
+    const newCheck = {};
+    Object.keys(check).forEach((key, position) => {
+      index === position
+        ? (newCheck[key] = !check[key])
+        : (newCheck[key] = check[key]);
+    });
+    setCheck(newCheck);
   };
 
   return (
     <div className="App">
-
       {/* <div className="rawJson">{isLoading ? <p>Loading...</p> : ""}</div> */}
       <HeroSection />
       <div></div>
@@ -54,11 +62,11 @@ function App() {
         ))}
       </div>
       <div className="card__wrapper">
-            {data?.map((data, index) => (
-        <CatCard key={index} cardData={data}/>
-      ))}
-    </div>
-    <Footer />
+        {data?.map((data, index) => (
+          <CatCard key={index} cardData={data} />
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 }
